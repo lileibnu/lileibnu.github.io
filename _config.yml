@@ -7,7 +7,7 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
+locale                   : "cn-ZH"
 title                    : "Lei Li / Site Title"
 title_separator          : "-"
 name                     : &name "Lei Li"
