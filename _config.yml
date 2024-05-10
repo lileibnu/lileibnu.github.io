@@ -21,7 +21,7 @@ repository               : "lileibnu/lileibnu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Lilei.png"
+  avatar           : "Lilei.jpg"
   name             : "Lei Li"
   pronouns         : # example: "she/her"  
   bio              : "You look gorgeous!"
