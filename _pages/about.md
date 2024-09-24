@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Lei Li"
+title: "李蕾"
 author_profile: true
 redirect_from: 
   - /about/
