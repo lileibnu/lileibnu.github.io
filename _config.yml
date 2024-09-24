@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "cn-ZH"
-title                    : "Lei Li / Site Title"
+title                    : "李蕾 / Lei Li"
 title_separator          : "-"
 name                     : &name "Lei Li"
 description              : &description "personal description"
@@ -23,21 +23,20 @@ author:
   # Biographic information
   avatar           : "Lilei.jpg"
   name             : "Lei Li"
-  pronouns         : # example: "she/her"  
-  bio              : "You look gorgeous!"
+  pronouns         : # example: "she/her"
   location         : "Beijing"
   employer         : "Beijing Normal University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "LeiLi@bnu.cn" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=IvIvICQAAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "http://orcid.org/yourorcidurl"
   semantic         : # URL
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Lei-Li-221"
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
