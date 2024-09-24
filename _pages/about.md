@@ -1,1 +1,10 @@
+---
+permalink: /
+title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 李蕾，女，现为北京师范大学政府管理学院信息管理系副教授，硕士生导师。2019年2月毕业于南京理工大学情报学专业，获管理学博士学位。2014年9月-2016年9月为美国匹兹堡大学信息学院联合培养博士生，2018年 10月-2019年2月为澳大利亚南澳大学信息技术与数学科学学院的短期研究助理，2019年3月-2021年3月为北京师范大学政府管理学院师资博士后，2021年4月-2023年8月为北京师范大学政府管理学院讲师。研究领域主要包括信息分析，用户信息行为，社会计算、信息质量评价、社交媒体等。针对这些相关领域以第一作者和合作者身份在国内外期刊和会议上共发表学术论文 40 余篇，其中第一作者发表包括《Aslib Journal of Information Management》、《Online information review》、《Library Hi Tech》、《情报学报》、《图书情报工作》、《情报理论与实践》等多篇中英文核心期刊论文，以及iConference、ASIS&T、JCDL、ICADL、HCI、ISSI等全文检索国际会议论文。出版专著1本。主持国家社会科学青年基金项目一项，中央高校经费项目一项，中国科学技术信息研究所学术前沿观察联合实验室开放基金项目二项；参与国家级省部级等各类横纵科研项目多项。
