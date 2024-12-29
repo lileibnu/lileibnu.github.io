@@ -13,61 +13,33 @@ author_profile: true
   <p style="font-size: 15px;" >Kun Huang, Lei Li*, Shi Chao Luo, and Xiao Yu Wang. "Difficulties of Vulnerable Groups in Accessing the Public Information Service During COVID-19 Pandemic in China." In Social Vulnerability to COVID-19: Impacts of Technology Adoption and Information Behavior, pp. 89-106. Cham: Springer International Publishing, 2023. </p>
   <p><strong>ARTICLES</strong></p>
 
-  <p style="font-size: 15px;"><strong>2017</strong></p>
-  <ul style="margin-left: 0; padding-left: 18px;">
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C07] Lei Li, Daqing He, Chengzhi Zhang. Evaluating academic answer quality: A pilot study on ResearchGate Q&A. In HCI in Business, Government, and Organizations: eCommerce and Innovation: Third International Conference, HCIBGO 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016, Proceedings, Part I 3, pp. 61-71. Springer International Publishing, 2016.<a href="https://doi.org/10.1007/978-3-319-39396-4_6">[doi]</a></p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C06] Lei Li, Ke Zhang, Qingqing Zhou, Chengzhi Zhang. Toward understanding review usefulness: a case study on Yelp restaurants. In IConference 2016 Proceedings, Philadelphia, PA, USA, iSchools, 2016.<a href="https://doi.org/10.9776/16536">[doi]</a></p>
-    </li>
-  </ul>
+  {% assign sorted_publications = site.posts | sort: 'date' %}
+  {% assign publications_by_year = {} %}
 
-  <p style="font-size: 15px;"><strong>2016</strong></p>
-  <ul style="margin-left: 0; padding-left: 18px;">
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C07] Lei Li, Daqing He, Chengzhi Zhang. Evaluating academic answer quality: A pilot study on ResearchGate Q&A. In HCI in Business, Government, and Organizations: eCommerce and Innovation: Third International Conference, HCIBGO 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016, Proceedings, Part I 3, pp. 61-71. Springer International Publishing, 2016.<a href="https://doi.org/10.1007/978-3-319-39396-4_6">[doi]</a></p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C06] Lei Li, Ke Zhang, Qingqing Zhou, Chengzhi Zhang. Toward understanding review usefulness: a cas</p>
-    </li>
-  </ul>
+  {% for post in sorted_publications %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if publications_by_year[year] %}
+      {% assign publications_by_year[year] = publications_by_year[year] | push: post %}
+    {% else %}
+      {% assign publications_by_year[year] = [post] %}
+    {% endif %}
+  {% endfor %}
 
-  <p style="font-size: 15px;"><strong>2015</strong></p>
-  <ul style="margin-left: 0; padding-left: 18px;">
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J06] 张颖怡,章成志,池雪花,李蕾.科研用户博文关键词标注行为差异研究——以科学网博客为例.现代图书情报技术,2015,(10):13-21.</p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J05] 邵健,章成志,李蕾.Hashtag研究综述.现代图书情报技术,2015,(10):40-49.</p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J04] 章成志,李蕾.社会化标签质量自动评估研究.现代图书情报技术,2015,(10):2-12.</p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C02] Lei Li, Daqing He, Wei Jeng, Spencer Goodwin, Chengzhi Zhang. Answer Quality Characteristics and Prediction on an Academic Q&A Site: A Case Study on ResearchGate. In: Proceedings of the 24th international conference on World Wide Web companion (WebQuality2015). Florence, Italy. ACM, 2015, 1453-1458.<a href="https://doi.org/10.1145/2740908.2742129">[doi]</a></p>
-    </li>
-  </ul>
-  
-  <p style="font-size: 15px;"><strong>2014</strong></p>
-  <ul style="margin-left: 0; padding-left: 18px;">
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J03] 李蕾,章成志.社会化标注系统中用户标注动机差异分析.情报学报,2014,33(06):633-643.</p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[C01] Lei Li, Chengzhi Zhang. Quality Evaluation of Social Tags according to Web Resource Types. In: Proceedings of the 23rd international conference on World Wide Web Companion (WebQuality2014). Seoul, Korea. ACM, 2014, 1123-1128.<a href="https://doi.org/10.1145/2567948.2578998">[doi]</a></p>
-    </li>
-  </ul>
+  {% for year, posts in publications_by_year %}
+    <p style="font-size: 15px;"><strong>{{ year }}</strong></p>
+    <ul style="margin-left: 0; padding-left: 18px;">
+      {% for post in posts %}
+        <li>
+          <p style="font-size: 15px; margin: 0 0;">[{{ post.type }}] {{ post.authors }}. {{ post.title }}. In {{ post.journal }}. 
+          {% if post.doi %}
+            <a href="{{ post.doi }}">[doi]</a>
+          {% endif %}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 
-  <p style="font-size: 15px;"><strong>2013</strong></p>
-  <ul style="margin-left: 0;padding-left: 18px;">
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J02] 李蕾,章成志.社会化标签质量评估研究综述.现代图书情报技术,2013,(11):22-29.</p>
-    </li>
-    <li>
-      <p style="font-size: 15px; margin: 0 0;">[J01] 李蕾,王冕,章成志.区分标签类型的社会化标签质量测评研究.图书情报工作, 2013, 57(23):11-16+9.</p>
-    </li>
-  </ul>
   
 
 
