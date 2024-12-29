@@ -22,9 +22,9 @@ repository               : "lileibnu/lileibnu.github.io"
 author:
   # Biographic information
   avatar           : "Lilei.jpg"
-  name             : "Lei Li"
-  pronouns         : # example: "she/her"
-  location         : "Beijing"
+  name             : "Lei Li （李蕾）"
+  pronouns         : "Associate Professor, at School of Government, Dept of IM, BNU"
+  location         : "Beijing,China"
   employer         : "Beijing Normal University"
   uri              : # URL
   email            : "LeiLi@bnu.cn" 
