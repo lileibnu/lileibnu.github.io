@@ -12,7 +12,26 @@ author_profile: true
   <p><strong>BOOK CHAPTERS</strong> </p>
   <p style="font-size: 15px;" >Kun Huang, Lei Li*, Shi Chao Luo, and Xiao Yu Wang. "Difficulties of Vulnerable Groups in Accessing the Public Information Service During COVID-19 Pandemic in China." In Social Vulnerability to COVID-19: Impacts of Technology Adoption and Information Behavior, pp. 89-106. Cham: Springer International Publishing, 2023. </p>
   <p><strong>ARTICLES</strong></p>
-
+  <div>
+ 
+  
+    {% assign current_year = "" %}
+  
+    {% for line in content %}
+      {% if line contains "##" %}
+        {% if current_year != "" %}
+          </ul> <!-- Close the previous year -->
+        {% endif %}
+        <p style="font-size: 15px;"><strong>{{ line | remove: "## " }}</strong></p>
+        <ul style="margin-left: 0; padding-left: 18px;">
+        {% assign current_year = line | remove: "## " %}
+      {% elsif line contains "doi" %}
+        <li>
+          <p style="font-size: 15px; margin: 0 0;">{{ line | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </div>
   
 
 
