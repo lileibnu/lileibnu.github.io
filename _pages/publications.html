@@ -24,7 +24,7 @@ permalink: /publications/
     {% assign current_year = line | remove: "## " %}
   {% elsif line contains "doi" %}
     <li>
-      <p style="font-size: 15px; margin: 0 0;">[{{ line | markdownify }}]</p>
+      <p style="font-size: 15px; margin: 0 0;">{{ line | escape }}</p>
     </li>
   {% endif %}
 {% endfor %}
