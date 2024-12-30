@@ -26,17 +26,20 @@ permalink: /publications/
     {% elsif line contains "doi" %}
       <li>
         <p style="font-size: 15px; margin: 0 0;">
-          {{ line | escape }}
+          <!-- 这里不使用 escape 过滤器，保留中括号和链接 -->
+          {{ line }}
         </p>
       </li>
     {% else %}
       <li>
         <p style="font-size: 15px; margin: 0 0;">
-          {{ line | escape }}
+          <!-- 处理普通文本 -->
+          {{ line }}
         </p>
       </li>
     {% endif %}
   {% endfor %}
+  
   
 
 
