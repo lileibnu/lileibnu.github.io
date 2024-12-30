@@ -1,5 +1,4 @@
 ---
-permalink: /publications/
 papers:
   - year: 2017
     entries:
