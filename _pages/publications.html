@@ -5,15 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% assign publications_content = site.static_files | where: "path", "_publications/publications.md" | first %}
-
-{% if publications_content %}
-  <div class="publications-content">
-    {{ publications_content.content | markdownify }}
+{% for publication in site.publications %}
+  <div class="publication">
+    {{ publication.content | markdownify }}
   </div>
-{% else %}
-  <p>无法找到 `publications.md` 文件。</p>
-{% endif %}
+{% endfor %}
 
 {% if site.author.googlescholar %}
   <p style="font-size: 15px;" >(*=Corresponding author, J=Journal articles, C=Conference papers/posters)</p>
