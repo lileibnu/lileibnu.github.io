@@ -14,31 +14,29 @@ permalink: /publications/
 
   {% assign current_year = "" %}
 
+  <ul style="margin-left: 0; padding-left: 18px;">
   {% for line in content %}
-    {% if line contains "#" %}
+    {% if line matches "^\d{4}$" %}
+      <!-- 检测年份 -->
       {% if current_year != "" %}
-        </ul> <!-- Close the previous year -->
+        </ul> <!-- 关闭上一年份的 ul -->
       {% endif %}
-      <!-- 输出年份，移除前导的 "#" 和空格 -->
-      <p style="font-size: 15px;"><strong>{{ line | remove: "#" | remove: " " }}</strong></p>
+      
+      <!-- 输出年份 -->
+      <p style="font-size: 15px; font-weight: bold;">{{ line }}</p>
       <ul style="margin-left: 0; padding-left: 18px;">
-      {% assign current_year = line | remove: "#" | remove: " " %}
-    {% elsif line contains "doi" %}
-      <li>
-        <p style="font-size: 15px; margin: 0 0;">
-          <!-- 这里不使用 escape 过滤器，保留中括号和链接 -->
-          {{ line }}
-        </p>
-      </li>
+      {% assign current_year = line %}
     {% else %}
+      <!-- 输出条目 -->
       <li>
         <p style="font-size: 15px; margin: 0 0;">
-          <!-- 处理普通文本 -->
-          {{ line }}
+          {{ line | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
       </li>
     {% endif %}
   {% endfor %}
+  </ul> <!-- 关闭最后一个年份的 ul -->
+  
   
   
 
