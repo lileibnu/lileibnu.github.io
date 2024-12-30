@@ -13,9 +13,9 @@ author_profile: true
   <p style="font-size: 15px;" >Kun Huang, Lei Li*, Shi Chao Luo, and Xiao Yu Wang. "Difficulties of Vulnerable Groups in Accessing the Public Information Service During COVID-19 Pandemic in China." In Social Vulnerability to COVID-19: Impacts of Technology Adoption and Information Behavior, pp. 89-106. Cham: Springer International Publishing, 2023. </p>
   <p><strong>ARTICLES</strong></p>
 
-  {% for paper in site.pages %}
-  {% if paper.papers %}
-    {% for item in paper.papers %}
+  {% for publication in site.publications %}
+  {% if publication.papers %}
+    {% for item in publication.papers %}
       <p style="font-size: 15px;"><strong>{{ item.year }}</strong></p>
       <ul style="margin-left: 0; padding-left: 18px;">
         {% for entry in item.entries %}
