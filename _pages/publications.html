@@ -14,8 +14,8 @@ author_profile: true
   <p><strong>ARTICLES</strong></p>
 
   {% for paper in site.publications %}
-  {% if paper.publications %}
-    {% for item in publications.papers %}
+  {% if paper.papers %}
+    {% for item in paper.papers %}
       <p style="font-size: 15px;"><strong>{{ item.year }}</strong></p>
       <ul style="margin-left: 0; padding-left: 18px;">
         {% for entry in item.entries %}
@@ -32,6 +32,7 @@ author_profile: true
     {% endfor %}
   {% endif %}
 {% endfor %}
+
   
   
   

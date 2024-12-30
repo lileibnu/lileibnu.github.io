@@ -1,4 +1,5 @@
 ---
+layout: default
 papers:
   - year: 2017
     entries:
