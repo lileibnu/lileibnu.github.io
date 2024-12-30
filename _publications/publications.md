@@ -2,8 +2,6 @@
 permalink: /publications/
 ---
 
-# Publications
-
 # 2017
 - [C07] Lei Li, Daqing He, Chengzhi Zhang. Evaluating academic answer quality: A pilot study on ResearchGate Q&A. In HCI in Business, Government, and Organizations: eCommerce and Innovation: Third International Conference, HCIBGO 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016, Proceedings, Part I 3, pp. 61-71. Springer International Publishing, 2016. [doi](https://doi.org/10.1007/978-3-319-39396-4_6)
 - [C06] Lei Li, Ke Zhang, Qingqing Zhou, Chengzhi Zhang. Toward understanding review usefulness: a case study on Yelp restaurants. In IConference 2016 Proceedings, Philadelphia, PA, USA, iSchools, 2016. [doi](https://doi.org/10.9776/16536)
