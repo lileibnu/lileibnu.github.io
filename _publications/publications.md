@@ -1,5 +1,6 @@
 ---
-permalink: /publication/
+layout: publications
+permalink: /publications/
 ---
 
 # 2017
