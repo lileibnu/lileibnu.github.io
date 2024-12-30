@@ -1,5 +1,4 @@
 ---
-layout: publications
 permalink: /publications/
 ---
 
