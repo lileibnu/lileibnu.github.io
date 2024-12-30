@@ -4,7 +4,7 @@ title: "Publications"
 permalink: /publications/
 ---
 
-
+{% if site.author.googlescholar %}
   <p style="font-size: 15px;" >(*=Corresponding author, J=Journal articles, C=Conference papers/posters)</p>
   <p><strong>BOOKS</strong></p>
   <p style="font-size: 15px;" >李蕾著. 学术型社会化问答平台上答案质量评估研究. 北京：科学技术文献出版社，2020.12</p>
@@ -14,22 +14,25 @@ permalink: /publications/
 
   {% assign current_year = "" %}
 
-  {% for line in content %}
-    {% if line contains "##" %}
-      {% if current_year != "" %}
-        </ul> <!-- Close the previous year -->
-      {% endif %}
-      <p style="font-size: 15px;"><strong>{{ line | remove: "## " }}</strong></p>
-      <ul style="margin-left: 0; padding-left: 18px;">
-      {% assign current_year = line | remove: "## " %}
-    {% elsif line contains "doi" %}
-      <li>
-        <p style="font-size: 15px; margin: 0 0;">{{ line | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      </li>
+{% for line in content %}
+  {% if line contains "##" %}
+    {% if current_year != "" %}
+      </ul> <!-- Close the previous year -->
     {% endif %}
-  {% endfor %}
+    <p style="font-size: 15px;"><strong>{{ line | remove: "## " }}</strong></p>
+    <ul style="margin-left: 0; padding-left: 18px;">
+    {% assign current_year = line | remove: "## " %}
+  {% elsif line contains "doi" %}
+    <li>
+      <p style="font-size: 15px; margin: 0 0;">
+        {% assign doi_link = line | remove: "doi: " %}
+        <a href="https://doi.org/{{ doi_link }}" target="_blank">[{{ doi_link }}]</a>
+      </p>
+    </li>
+  {% endif %}
+{% endfor %}
 
-
+{% endif %}
 
 
 
