@@ -14,7 +14,7 @@ permalink: /publications/
 
   {% assign current_year = "" %}
 
-{% for line in content %}
+  {% for line in content %}
   {% if line contains "##" %}
     {% if current_year != "" %}
       </ul> <!-- Close the previous year -->
@@ -24,13 +24,11 @@ permalink: /publications/
     {% assign current_year = line | remove: "## " %}
   {% elsif line contains "doi" %}
     <li>
-      <p style="font-size: 15px; margin: 0 0;">
-        {% assign doi_link = line | remove: "doi: " %}
-        <a href="https://doi.org/{{ doi_link }}" target="_blank">[{{ doi_link }}]</a>
-      </p>
+      <p style="font-size: 15px; margin: 0 0;">{{ line | markdownify }}</p>
     </li>
   {% endif %}
 {% endfor %}
+
 
 {% endif %}
 
