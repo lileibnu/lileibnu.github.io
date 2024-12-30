@@ -1,4 +1,10 @@
+---
+layout: archive
+title: Publications
+permalink: /publications/
+---
 
+# Publications
 
 # 2017
 - [C07] Lei Li, Daqing He, Chengzhi Zhang. Evaluating academic answer quality: A pilot study on ResearchGate Q&A. In HCI in Business, Government, and Organizations: eCommerce and Innovation: Third International Conference, HCIBGO 2016, Held as Part of HCI International 2016, Toronto, Canada, July 17-22, 2016, Proceedings, Part I 3, pp. 61-71. Springer International Publishing, 2016. [doi](https://doi.org/10.1007/978-3-319-39396-4_6)
