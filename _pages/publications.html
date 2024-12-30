@@ -13,30 +13,25 @@ author_profile: true
   <p style="font-size: 15px;" >Kun Huang, Lei Li*, Shi Chao Luo, and Xiao Yu Wang. "Difficulties of Vulnerable Groups in Accessing the Public Information Service During COVID-19 Pandemic in China." In Social Vulnerability to COVID-19: Impacts of Technology Adoption and Information Behavior, pp. 89-106. Cham: Springer International Publishing, 2023. </p>
   <p><strong>ARTICLES</strong></p>
 
-  {% assign current_year = "" %}
-
-  <ul style="margin-left: 0; padding-left: 18px;">
-  {% for line in content %}
-    {% if line matches "^\d{4}$" %}
-      <!-- 检测年份 -->
-      {% if current_year != "" %}
-        </ul> <!-- 关闭上一年份的 ul -->
-      {% endif %}
-      
-      <!-- 输出年份 -->
-      <p style="font-size: 15px; font-weight: bold;">{{ line }}</p>
+  {% for paper in site.pages %}
+  {% if paper.papers %}
+    {% for item in paper.papers %}
+      <p style="font-size: 15px;"><strong>{{ item.year }}</strong></p>
       <ul style="margin-left: 0; padding-left: 18px;">
-      {% assign current_year = line %}
-    {% else %}
-      <!-- 输出条目 -->
-      <li>
-        <p style="font-size: 15px; margin: 0 0;">
-          {{ line | markdownify | remove: "<p>" | remove: "</p>" }}
-        </p>
-      </li>
-    {% endif %}
-  {% endfor %}
-  </ul> <!-- 关闭最后一个年份的 ul -->
+        {% for entry in item.entries %}
+          <li>
+            <p style="font-size: 15px; margin: 0 0;">
+              {{ entry.type }} {{ entry.authors }}. {{ entry.title }}. In {{ entry.venue }}. {{ entry.year }}.
+              {% if entry.doi %}
+                <a href="{{ entry.doi }}">[doi]</a>
+              {% endif %}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
   
   
   
