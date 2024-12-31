@@ -284,16 +284,16 @@ defaults:
       author_profile: true
       share: false
       comment: true
-  #_contact
-    - scope:
+  #_students
+  - scope:
       path: ""
-      type: contact
+      type: students
     values:
-      layout: contact
+      layout: students
       author_profile: true
       share: false
       comment: true
-
+  
 # Sass/SCSS
 sass:
   sass_dir: _sass
