@@ -222,6 +222,9 @@ collections:
   funding:
     output: true
     permalink: /:collection/:path/
+  students:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -279,7 +282,14 @@ defaults:
       layout: funding
       author_profile: true
       share: false
-
+  #_students
+  - scope:
+      path: ""
+      type: students
+    values:
+      layout: students
+      author_profile: true
+      share: false
 
 # Sass/SCSS
 sass:
