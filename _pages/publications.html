@@ -16,23 +16,24 @@ author_profile: true
 <p><strong>ARTICLES</strong></p>
 
 {% for paper in site.publications %}
-{% if paper.papers %}
-{% for item in paper.papers %}
-  <p style="font-size: 15px;"><strong>{{ item.year }}</strong></p>
-  <ul style="margin-left: 0; padding-left: 18px;">
-	{% for entry in item.entries %}
-	  <li>
-		<p style="font-size: 15px; margin: 0 0;">
-		  {{ entry.type }} {{ entry.authors }}. {{ entry.title }}. In {{ entry.venue }}. {{ entry.year }}.
-		  {% if entry.doi %}
-			<a href="{{ entry.doi }}">[doi]</a>
-		  {% endif %}
-		</p>
-	  </li>
-	{% endfor %}
-  </ul>
+	{% if paper.papers %}
+		{% for item in paper.papers %}
+			<p style="font-size: 15px;"><strong>{{ item.year }}</strong></p>
+			<ul style="margin-left: 0; padding-left: 18px;">
+				{% for entry in item.entries %}
+				<li>
+					<p style="font-size: 15px; margin: 0 0;">
+					{{ entry.type }} {{ entry.authors }}. {{ entry.title }}. In {{ entry.venue }}. {{ entry.year }}.
+					{% if entry.doi %}
+						<a href="{{ entry.doi }}">[doi]</a>
+					{% endif %}
+					</p>
+				</li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+	{% endif %}
 {% endfor %}
-
 
   
 
