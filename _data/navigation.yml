@@ -18,10 +18,10 @@ main:
     url: /portfolio/
         
   - title: "Students"
-    url: /year-archive/
+    url: /students/
     
   - title: "Contact"
-    url: /cv/
+    url: /contact/
     
   #- title: "Guide"
   #  url: /markdown/
