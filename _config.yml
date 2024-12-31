@@ -216,7 +216,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  serviceawards:
+  portfolio:
     output: true
     permalink: /:collection/:path/
   funding:
@@ -262,10 +262,10 @@ defaults:
       author_profile: true
       share: false
       comments: true
-  # _serviceawards
+  # _portfolio
   - scope:
       path: ""
-      type: serviceawards
+      type: portfolio
     values:
       layout: single
       author_profile: true
