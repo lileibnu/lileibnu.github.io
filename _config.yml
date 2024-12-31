@@ -284,7 +284,7 @@ defaults:
       author_profile: true
       share: false
       comment: true
-  #contact
+  #_contact
     - scope:
       path: ""
       type: contact
