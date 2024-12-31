@@ -225,6 +225,9 @@ collections:
   students:
     output: true
     permalink: /:collection/:path/
+  contact:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -278,6 +281,15 @@ defaults:
       type: students
     values:
       layout: students
+      author_profile: true
+      share: false
+      comment: true
+  #contact
+    - scope:
+      path: ""
+      type: contact
+    values:
+      layout: contact
       author_profile: true
       share: false
       comment: true
