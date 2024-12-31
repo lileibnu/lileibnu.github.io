@@ -229,17 +229,6 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -282,6 +271,7 @@ defaults:
       layout: funding
       author_profile: true
       share: false
+      comment: true
   #_students
   - scope:
       path: ""
@@ -290,6 +280,7 @@ defaults:
       layout: students
       author_profile: true
       share: false
+      comment: true
 
 # Sass/SCSS
 sass:
