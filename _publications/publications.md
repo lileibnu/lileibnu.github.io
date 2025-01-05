@@ -28,7 +28,7 @@ papers:
         title: "大语言模型细粒度评论挖掘下的博物馆服务用户满意度研究"
         venue: "图书情报工作"
         year: 2024
-        issue: "6817"
+        issue: "68(17)"
         pages: "54-67"
       - type: "[J31]"
         authors: "黄崑,罗士超,李蕾"
