@@ -24,13 +24,17 @@ author_profile: true
 					<p style="font-size: 15px; margin: 0 0;">
 						{{ entry.type }} {{ entry.authors }}. {{ entry.title }}. {{ entry.venue }}. {{ entry.year }}.
 						{% if entry.issue %}
+						{% if entry.pages %}
+						{{ entry.issue }}
+						{% else %}
 						{{ entry.issue }}. 
+						{% endif %}
 						{% endif %}
 						{% if entry.pages %}
 						:{{ entry.pages }}. 
 						{% endif %}
 						{% if entry.doi %}
-						. <a href="{{ entry.doi }}">[doi]</a>
+						<a href="{{ entry.doi }}">[doi]</a>
 						{% endif %}
 					</p>
 					</li>
