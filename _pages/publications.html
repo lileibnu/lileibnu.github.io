@@ -27,11 +27,11 @@ author_profile: true
 						. {{ entry.issue }}
 						{% endif %}
 						{% if entry.pages %}
-						. {{ entry.pages }}
+						: {{ entry.pages }}
 						{% endif %}
 						{% if entry.doi %}
 						. <a href="{{ entry.doi }}">[doi]</a>
-						{% endif %}
+						{% endif %}.
 					</p>
 					</li>
 				{% endfor %}
