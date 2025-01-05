@@ -22,7 +22,7 @@ author_profile: true
 				{% for entry in item.entries %}
 					<li>
 					<p style="font-size: 15px; margin: 0 0;">
-						{{ entry.type }} {{ entry.authors }}. {{ entry.title }}. In {{ entry.venue }}. {{ entry.year }}.
+						{{ entry.type }} {{ entry.authors }}. {{ entry.title }}. {{ entry.venue }}. {{ entry.year }}.
 						{% if entry.doi %}
 						<a href="{{ entry.doi }}">[doi]</a>
 						{% endif %}
