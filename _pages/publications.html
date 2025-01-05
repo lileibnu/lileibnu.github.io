@@ -23,6 +23,12 @@ author_profile: true
 					<li>
 					<p style="font-size: 15px; margin: 0 0;">
 						{{ entry.type }} {{ entry.authors }}. {{ entry.title }}. {{ entry.venue }}. {{ entry.year }}.
+						{% if entry.issue %}
+						{{ entry.issue }}.
+						{% endif %}
+						{% if entry.pages %}
+						{{ entry.pages }}.
+						{% endif %}
 						{% if entry.doi %}
 						<a href="{{ entry.doi }}">[doi]</a>
 						{% endif %}
