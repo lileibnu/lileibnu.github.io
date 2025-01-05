@@ -8,6 +8,7 @@ papers:
         title: "用户体验视角下ChatGPT辅助信息检索的可用性研究"
         venue: "情报理论与实践"
         year: 2025
+        issue: "(in press)"
         doi: "http://kns.cnki.net/kcms/detail/11.1762.G3.20240903.1130.002.html"
       - type: "[C25]"
         authors: "Hui Peng, Shujun Liu, Lei Li*"
@@ -63,4 +64,5 @@ papers:
         title: "ChatGPT-Assisted Information Retrieval: A Comparative Study of User Behavior in Academic Information Retrieval"
         venue: "In: Proceedings of the 24th ACM/IEEE Joint Conference on Digital Libraries (JCDL2024), Hong Kong, China, ACM"
         year: 2024
+        issue: "(in press)"
 ---
