@@ -3,14 +3,14 @@ layout: default
 papers:
   - year: 2025
     entries:
-      - type: "[C26]"
-        authors: "Lei Li, Yue Hu, Hui Peng"
-        title: "The Effectiveness of Large Language Models in Predicting User Question Preferences on ResearchGate Q&A"
+      - type: "[C27]"
+        authors: "Lei Li, Yue Hu, Hui Peng, Shi Chen"
+        title: "Quality Evaluation of Scientific Journals in the Open Science Context"
         venue: "In International Conference on 20th International Conference on Scientometrics & Informetrics, Yerevan Armenia"
         year: 2025
         issue: "Volume 2"
-        pages: "2517-2519"
-        doi: "https://doi.org/10.51408/issi2025_191"
+        pages: "2493-2495"
+        doi: "https://doi.org/10.51408/issi2025_190"
       - type: "[C26]"
         authors: "Lei Li, Yue Hu, Hui Peng"
         title: "The Effectiveness of Large Language Models in Predicting User Question Preferences on ResearchGate Q&A"
